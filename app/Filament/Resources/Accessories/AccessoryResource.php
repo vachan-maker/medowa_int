@@ -2,23 +2,23 @@
 
 namespace App\Filament\Resources\Accessories;
 
-use App\Filament\Resources\Accessories\Pages\CreateAccessories;
-use App\Filament\Resources\Accessories\Pages\EditAccessories;
+use App\Filament\Resources\Accessories\Pages\CreateAccessory;
+use App\Filament\Resources\Accessories\Pages\EditAccessory;
 use App\Filament\Resources\Accessories\Pages\ListAccessories;
-use App\Filament\Resources\Accessories\Pages\ViewAccessories;
-use App\Filament\Resources\Accessories\Schemas\AccessoriesForm;
-use App\Filament\Resources\Accessories\Schemas\AccessoriesInfolist;
+use App\Filament\Resources\Accessories\Pages\ViewAccessory;
+use App\Filament\Resources\Accessories\Schemas\AccessoryForm;
+use App\Filament\Resources\Accessories\Schemas\AccessoryInfolist;
 use App\Filament\Resources\Accessories\Tables\AccessoriesTable;
-use App\Models\Accessories;
+use App\Models\Accessory;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 
-class AccessoriesResource extends Resource
+class AccessoryResource extends Resource
 {
-    protected static ?string $model = Accessories::class;
+    protected static ?string $model = Accessory::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
@@ -26,12 +26,12 @@ class AccessoriesResource extends Resource
 
     public static function form(Schema $schema): Schema
     {
-        return AccessoriesForm::configure($schema);
+        return AccessoryForm::configure($schema);
     }
 
     public static function infolist(Schema $schema): Schema
     {
-        return AccessoriesInfolist::configure($schema);
+        return AccessoryInfolist::configure($schema);
     }
 
     public static function table(Table $table): Table
@@ -50,9 +50,9 @@ class AccessoriesResource extends Resource
     {
         return [
             'index' => ListAccessories::route('/'),
-            'create' => CreateAccessories::route('/create'),
-            'view' => ViewAccessories::route('/{record}'),
-            'edit' => EditAccessories::route('/{record}/edit'),
+            'create' => CreateAccessory::route('/create'),
+            'view' => ViewAccessory::route('/{record}'),
+            'edit' => EditAccessory::route('/{record}/edit'),
         ];
     }
 }

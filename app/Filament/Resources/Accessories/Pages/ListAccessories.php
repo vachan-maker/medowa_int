@@ -2,13 +2,13 @@
 
 namespace App\Filament\Resources\Accessories\Pages;
 
-use App\Filament\Resources\Accessories\AccessoriesResource;
+use App\Filament\Resources\Accessories\AccessoryResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 
 class ListAccessories extends ListRecords
 {
-    protected static string $resource = AccessoriesResource::class;
+    protected static string $resource = AccessoryResource::class;
 
     protected function getHeaderActions(): array
     {
