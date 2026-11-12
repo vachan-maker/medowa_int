@@ -8,7 +8,10 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans antialiased bg-[#f5f5f7] text-gray-900 p-20">
+<body class="font-sans antialiased bg-[#f5f5f7] text-gray-900 px-5 py-8 sm:px-8 lg:px-16">
     <x-header />
+    <div class="my-8 lg:my-10">
+        <x-categories :categories="$categories" />
+    </div>
 </body>
 </html>
