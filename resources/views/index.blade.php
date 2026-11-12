@@ -14,5 +14,6 @@
         <x-categories :categories="$categories" />
     </div>
     <x-latest :latest-products="$latestProducts" />
+    <x-accessories :accessories="$accessories"/>
 </body>
 </html>
