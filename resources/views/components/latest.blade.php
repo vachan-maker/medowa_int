@@ -1,5 +1,6 @@
 <div>
-    <h2>The Latest. <span>Take a look at what's new</span></h2>
+    <h2 class="text-2xl font-semibold">The latest. <span class="text-gray-700 font-semibold">Take a look at what's new</span></h2>
+
 
     <div class="mt-6 flex snap-x gap-4 overflow-x-auto p-3 scrollbar-none [&::-webkit-scrollbar]:hidden">
         @foreach ($latestProducts as $latest)
