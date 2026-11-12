@@ -14,5 +14,6 @@ class Categories extends Model
     protected $fillable = [
         'name',
         'image_url',
+        'is_featured',
     ];
 }

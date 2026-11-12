@@ -16,6 +16,9 @@ class CategoriesForm
                 TextInput::make('name')
                     ->required(),
                 FileUpload::make('image_url')
+                    ->disk('assets')
+                    ->directory('images/categories')
+                    ->visibility('public')
                     ->image()
                     ->required(),
                 Toggle::make('is_featured')

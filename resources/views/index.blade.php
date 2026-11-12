@@ -13,7 +13,10 @@
     <div class="my-8 lg:my-10">
         <x-categories :categories="$categories" />
     </div>
+    <div class="my-8 lg:my-10">
     <x-latest :latest-products="$latestProducts" />
+    </div>
     <x-accessories :accessories="$accessories"/>
+    <x-sound :sounds="$sounds"/>
 </body>
 </html>

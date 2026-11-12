@@ -14,7 +14,8 @@ class CategoriesInfolist
         return $schema
             ->components([
                 TextEntry::make('name'),
-                ImageEntry::make('image_url'),
+                ImageEntry::make('image_url')
+                    ->disk('assets'),
                 TextEntry::make('created_at')
                     ->dateTime()
                     ->placeholder('-'),

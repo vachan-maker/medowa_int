@@ -19,7 +19,8 @@ class CategoriesTable
             ->columns([
                 TextColumn::make('name')
                     ->searchable(),
-                ImageColumn::make('image_url'),
+                ImageColumn::make('image_url')
+                    ->disk('assets'),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
