@@ -18,5 +18,6 @@
     </div>
     <x-accessories :accessories="$accessories"/>
     <x-sound :sounds="$sounds"/>
+    <x-footer />
 </body>
 </html>
