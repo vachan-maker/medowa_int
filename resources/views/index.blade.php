@@ -13,5 +13,6 @@
     <div class="my-8 lg:my-10">
         <x-categories :categories="$categories" />
     </div>
+    <x-latest :latest-products="$latestProducts" />
 </body>
 </html>
