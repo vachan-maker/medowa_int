@@ -7,6 +7,90 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Installation
+
+### Requirements
+
+| Tool | Version |
+| --- | --- |
+| PHP | 8.3+ with `pdo_sqlite` (or `pdo_pgsql`/`pdo_mysql`), `intl`, `zip`, `mbstring`, `openssl` |
+| Composer | 2.x |
+| Node.js | 24.x + npm |
+| Database | SQLite by default; PostgreSQL or MySQL supported |
+
+### Setup
+
+```bash
+git clone <repository-url> medowa_int_project
+cd medowa_int_project
+
+# PHP dependencies
+composer install
+
+# Environment
+cp .env.example .env
+php artisan key:generate
+
+# Database (SQLite is the default)
+touch database/database.sqlite
+php artisan migrate --seed
+
+# Public storage for uploaded product/accessory images
+php artisan storage:link
+
+# Front-end assets
+npm install
+npm run build
+```
+
+### One-command alternative
+
+```bash
+composer setup
+```
+
+This runs `composer install`, creates `.env`, generates the key, migrates, and builds assets. It does **not** seed the database or create the storage link, so still run:
+
+```bash
+php artisan db:seed
+php artisan storage:link
+```
+
+### Running locally
+
+Start everything (web server, queue listener, logs, Vite) with:
+
+```bash
+composer dev
+```
+
+Or run the processes separately:
+
+```bash
+php artisan serve      # http://localhost:8000
+npm run dev            # Vite dev server with HMR
+php artisan queue:work # if processing queued jobs
+```
+
+### Admin panel
+
+The Filament admin panel is available at:
+
+```
+http://localhost:8000/admin
+```
+
+The seeder creates an initial user:
+
+- **Email:** `test@example.com`
+- **Password:** `password`
+
+Create another admin user with:
+
+```bash
+php artisan make:filament-user
+```
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
