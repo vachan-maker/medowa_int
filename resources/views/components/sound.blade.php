@@ -14,10 +14,7 @@
                 </div>
 
                 <div class="flex flex-col gap-1.5 p-5">
-                    <span
-                        class="inline-flex w-fit rounded-full bg-amber-100 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-amber-700">
-                        New
-                    </span>
+                    <span class="text-amber-500">New</span>
                     <h3 class="line-clamp-2 text-base font-semibold leading-snug" style="color: {{ $sound->string_color }}">
                         {{ $sound->name }}
                     </h3>

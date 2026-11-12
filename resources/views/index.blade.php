@@ -8,25 +8,31 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans antialiased bg-[#f5f5f7] text-gray-900 px-5 py-8 sm:px-8 lg:px-16">
-    <x-header />
+<body class="font-sans antialiased bg-[#f5f5f7] text-gray-900">
+    <x-nav />
 
-    <div class="my-8 lg:my-10">
-        <x-categories :categories="$categories" />
+    <div class="px-5 pb-8 sm:px-8 lg:px-16">
+        <div class="mt-8 lg:mt-10">
+            <x-header />
+        </div>
+
+        <div class="my-8 lg:my-10">
+            <x-categories :categories="$categories" />
+        </div>
+
+        <div class="my-8 lg:my-10">
+            <x-latest :latest-products="$latestProducts" />
+        </div>
+
+        <div class="my-8 lg:my-10">
+            <x-accessories :accessories="$accessories" />
+        </div>
+
+        <div class="my-8 lg:my-10">
+            <x-sound :sounds="$sounds" />
+        </div>
+
+        <x-footer />
     </div>
-
-    <div class="my-8 lg:my-10">
-        <x-latest :latest-products="$latestProducts" />
-    </div>
-
-    <div class="my-8 lg:my-10">
-        <x-accessories :accessories="$accessories" />
-    </div>
-
-    <div class="my-8 lg:my-10">
-        <x-sound :sounds="$sounds" />
-    </div>
-
-    <x-footer />
 </body>
 </html>
