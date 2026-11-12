@@ -10,14 +10,23 @@
 </head>
 <body class="font-sans antialiased bg-[#f5f5f7] text-gray-900 px-5 py-8 sm:px-8 lg:px-16">
     <x-header />
+
     <div class="my-8 lg:my-10">
         <x-categories :categories="$categories" />
     </div>
+
     <div class="my-8 lg:my-10">
-    <x-latest :latest-products="$latestProducts" />
+        <x-latest :latest-products="$latestProducts" />
     </div>
-    <x-accessories :accessories="$accessories"/>
-    <x-sound :sounds="$sounds"/>
+
+    <div class="my-8 lg:my-10">
+        <x-accessories :accessories="$accessories" />
+    </div>
+
+    <div class="my-8 lg:my-10">
+        <x-sound :sounds="$sounds" />
+    </div>
+
     <x-footer />
 </body>
 </html>

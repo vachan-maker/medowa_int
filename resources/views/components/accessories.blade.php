@@ -3,7 +3,7 @@
         Accessories. <span class="font-normal text-gray-500">Essentials that pair perfectly with your favourite products.</span>
     </h2>
 
-    <div class="mt-6 flex snap-x gap-5 overflow-x-auto p-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+    <div class="mt-6 flex snap-x gap-5 overflow-x-auto px-3 pt-3 pb-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         @foreach ($accessories as $accessory)
             <article
                 class="group flex h-100 w-full max-w-84 shrink-0 snap-start flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5 transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-xl"

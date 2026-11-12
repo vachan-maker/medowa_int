@@ -2,10 +2,10 @@
     <h2 class="text-2xl font-semibold">The latest. <span class="text-gray-700 font-semibold">Take a look at what's new</span></h2>
 
 
-    <div class="mt-6 flex snap-x gap-4 overflow-x-auto p-3 scrollbar-none [&::-webkit-scrollbar]:hidden">
+    <div class="mt-6 flex snap-x gap-4 overflow-x-auto px-3 pt-3 pb-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         @foreach ($latestProducts as $latest)
             <div
-                class="relative h-100 w-full max-w-84 shrink-0 snap-start overflow-hidden rounded-xl bg-cover bg-center shadow-2xl transition duration-300 ease-in-out hover:z-10 hover:scale-105"
+                class="relative h-100 w-full max-w-84 shrink-0 snap-start overflow-hidden rounded-xl bg-cover bg-center shadow-sm ring-1 ring-black/5 transition duration-300 ease-in-out hover:z-10 hover:scale-105"
                 style="background-image: url('{{ Storage::disk('public')->url($latest->image_url) }}')"
             >
 
