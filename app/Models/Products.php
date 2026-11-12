@@ -13,6 +13,7 @@ class Products extends Model
     'price',
     'image_url',
     'is_featured',
-    'tagline'
+    'tagline',
+    'is_new'
     ];
 }
