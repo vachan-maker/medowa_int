@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Categories\Schemas;
 
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 
 class CategoriesForm
@@ -16,6 +17,8 @@ class CategoriesForm
                     ->required(),
                 FileUpload::make('image_url')
                     ->image()
+                    ->required(),
+                Toggle::make('is_featured')
                     ->required(),
             ]);
     }
