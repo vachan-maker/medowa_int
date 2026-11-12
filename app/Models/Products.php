@@ -14,6 +14,7 @@ class Products extends Model
     'image_url',
     'is_featured',
     'tagline',
-    'is_new'
+    'is_new',
+    'text_color'
     ];
 }

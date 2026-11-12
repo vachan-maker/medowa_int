@@ -32,6 +32,8 @@ class ProductsInfolist
                     ->placeholder('-'),
                 IconEntry::make('is_new')
                     ->boolean(),
+                TextEntry::make('text_color')
+                    ->columnSpanFull(),
             ]);
     }
 }

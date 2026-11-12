@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Products\Schemas;
 
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 
@@ -32,6 +33,10 @@ class ProductsForm
                 TextInput::make('tagline'),
                 Toggle::make('is_new')
                     ->required(),
+                Textarea::make('text_color')
+                    ->required()
+                    ->default('#ffffff')
+                    ->columnSpanFull(),
             ]);
     }
 }
